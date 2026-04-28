@@ -90,8 +90,9 @@ build_connectivity_longtable(...)
 run_psd_lme_models(...)
 run_connectivity_lme_models(...)
 
+Data availability
+De-identified EEG data are available from the corresponding author upon reasonable request. The dataset is currently being processed for public release via DABI.
 
-De-identified EEG data and associated metadata are available at: https://dabi.loni.usc.edu/projects/3AXFYGFQQSCA
 
 
 
