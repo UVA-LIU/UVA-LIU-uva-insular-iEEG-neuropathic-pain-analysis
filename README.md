@@ -126,8 +126,3 @@ https://github.com/UVA-LIU/UVA-LIU-uva-insular-iEEG-neuropathic-pain-analysis
 - All code is designed to be modular and reproducible  
 
 ---
-
-## Contact
-
-Jeff Liu, PhD  
-University of Virginia
