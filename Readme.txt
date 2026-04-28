@@ -91,7 +91,7 @@ run_psd_lme_models(...)
 run_connectivity_lme_models(...)
 
 
-De-identified EEG data and associated metadata are available at: https://dabi.loni.usc.edu/projects/3AXFYGFQQSCA?token=4afd9d02-f640-421e-b27c-9eeb1fab8522
+De-identified EEG data and associated metadata are available at: https://dabi.loni.usc.edu/projects/3AXFYGFQQSCA
 
 
 
