@@ -1,1 +1,1 @@
-# UVA-LIU-uva-insular-iEEG-neuropathic-pain-analysis
+# insula-ieeg-neuropathic-pain
