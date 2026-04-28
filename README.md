@@ -68,16 +68,16 @@ subjectIDs = {'DBS001','DBS002','DBS003','DBS004','DBS005','DBS006'};
 subjectInfo.DBS001 = {'Day_1','Day_2','Day_3'};
 subjectInfo.DBS002 = {'Day_1','Day_2','Day_3'};
 
-You also need:
 
 regionDef = [];  % or provide region definition if available
 
 exclusionFile = fullfile(rootPath,'bipolar_channel_exclusions.csv');
 
 opts = struct();  % optional settings
-Step 2: Run full pipeline
+
+
 run_all_analysis(rootPath, subjectIDs, subjectInfo, regionDef, exclusionFile, opts);
-Step 3: Run individual steps (optional)
+
 % Preprocessing
 load_raw_eeg_from_setfiles(rootPath, subjectInfo, [], regionDef, opts);
 build_bipolar_montage(rootPath, subjectIDs, regionDef);
@@ -93,8 +93,12 @@ build_connectivity_longtable(rootPath, subjectIDs);
 run_psd_lme_models([], rootPath);
 run_connectivity_lme_models([], rootPath);
 
-Notes
-This repository contains the final analysis pipeline only
-Intermediate scripts are not included
-All code is designed to be modular and reproducible
-De-identified EEG data are available from the corresponding author upon reasonable request. The dataset is currently being processed for public release via DABI.
+
+
+
+
+
+
+
+
+
