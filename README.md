@@ -97,3 +97,4 @@ Notes
 This repository contains the final analysis pipeline only
 Intermediate scripts are not included
 All code is designed to be modular and reproducible
+De-identified EEG data are available from the corresponding author upon reasonable request. The dataset is currently being processed for public release via DABI.
