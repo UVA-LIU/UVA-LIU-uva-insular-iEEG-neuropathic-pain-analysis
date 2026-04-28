@@ -48,3 +48,55 @@ The analysis pipeline includes:
 ---
 
 ## Repository Structure
+
+preprocessing/
+spectral/
+connectivity/
+statistics/
+
+
+
+---
+
+## Requirements
+
+- MATLAB (tested on R2023b or later)  
+- Signal Processing Toolbox  
+- Statistics and Machine Learning Toolbox  
+- EEGLAB (for loading `.set` files)  
+
+---
+
+## How to Run
+
+### Step 1: Configure paths and subjects
+
+```matlab
+rootPath = '/path/to/data';
+subjectIDs = {'DBS001','DBS002'};
+
+% Preprocessing
+load_raw_eeg_from_setfiles(...)
+build_bipolar_montage(...)
+run_bipolar_qc(...)
+
+% Spectral analysis
+compute_psd_metrics(...)
+
+% Connectivity analysis
+build_connectivity_longtable(...)
+
+% Statistical modeling
+run_psd_lme_models(...)
+run_connectivity_lme_models(...)
+
+
+De-identified EEG data and associated metadata are available at: https://dabi.loni.usc.edu/projects/3AXFYGFQQSCA?token=4afd9d02-f640-421e-b27c-9eeb1fab8522
+
+
+
+
+
+
+
+
