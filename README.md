@@ -70,3 +70,21 @@ build_connectivity_longtable(...)
 % Statistics
 run_psd_lme_models(...)
 run_connectivity_lme_models(...)
+
+
+## Data Availability
+
+De-identified EEG data and associated metadata are available through DABI:
+
+https://dabi.loni.usc.edu/projects/3AXFYGFQQSCA
+
+## Code Availability
+
+All analysis code is available at:
+
+https://github.com/UVA-LIU/UVA-LIU-uva-insular-iEEG-neuropathic-pain-analysis
+
+Notes
+This repository contains the final analysis pipeline only
+Intermediate scripts are not included
+All code is designed to be modular and reproducible
