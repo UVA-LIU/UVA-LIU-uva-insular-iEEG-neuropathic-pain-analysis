@@ -55,34 +55,43 @@ The analysis pipeline includes:
 
 ## How to Run
 
+### Step 1: Configure inputs
+
+Define your data path and subject information in MATLAB:
+
 ```matlab
+rootPath = '/path/to/data';
+
+subjectIDs = {'DBS001','DBS002','DBS003','DBS004','DBS005','DBS006'};
+
+% Example subjectInfo structure
+subjectInfo.DBS001 = {'Day_1','Day_2','Day_3'};
+subjectInfo.DBS002 = {'Day_1','Day_2','Day_3'};
+
+You also need:
+
+regionDef = [];  % or provide region definition if available
+
+exclusionFile = fullfile(rootPath,'bipolar_channel_exclusions.csv');
+
+opts = struct();  % optional settings
+Step 2: Run full pipeline
+run_all_analysis(rootPath, subjectIDs, subjectInfo, regionDef, exclusionFile, opts);
+Step 3: Run individual steps (optional)
 % Preprocessing
-load_raw_eeg_from_setfiles(...)
-build_bipolar_montage(...)
-run_bipolar_qc(...)
+load_raw_eeg_from_setfiles(rootPath, subjectInfo, [], regionDef, opts);
+build_bipolar_montage(rootPath, subjectIDs, regionDef);
+run_bipolar_qc(rootPath, exclusionFile, subjectIDs);
 
-% Spectral
-compute_psd_metrics(...)
+% Spectral analysis
+compute_psd_metrics(rootPath, subjectIDs);
 
-% Connectivity
-build_connectivity_longtable(...)
+% Connectivity analysis
+build_connectivity_longtable(rootPath, subjectIDs);
 
-% Statistics
-run_psd_lme_models(...)
-run_connectivity_lme_models(...)
-
-
-## Data Availability
-
-De-identified EEG data and associated metadata are available through DABI:
-
-https://dabi.loni.usc.edu/projects/3AXFYGFQQSCA
-
-## Code Availability
-
-All analysis code is available at:
-
-https://github.com/UVA-LIU/UVA-LIU-uva-insular-iEEG-neuropathic-pain-analysis
+% Statistical modeling
+run_psd_lme_models([], rootPath);
+run_connectivity_lme_models([], rootPath);
 
 Notes
 This repository contains the final analysis pipeline only
